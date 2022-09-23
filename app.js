@@ -1,6 +1,31 @@
 const menu = document.querySelector(".header__menu");
 const x = document.querySelector(".modal-navbar_close");
+
+
 const gallery = document.querySelector(".gallery__image-container");
+const previusButton = document.querySelector(".gallery__previous")
+const nextButton = document.querySelector(".gallery__next")
+let imgIndex = 0;
+
+nextButton.addEventListener("click", function() {
+    if (imgIndex == 3){
+        imgIndex = 0;
+    }else{
+        imgIndex++;
+    }
+    gallery.style.backgroundImage = `url('../images/image-product-${imgIndex+1}.jpg')`;
+})
+
+previusButton.addEventListener("click", function() {
+    if (imgIndex == 0){
+        imgIndex = 3;
+    }else{
+        imgIndex--;
+    }
+    gallery.style.backgroundImage = `url('../images/image-product-${imgIndex+1}.jpg')`;
+})
+
+
 const cruz = document.querySelector(".modal-gallery__close");
 
 const cart = document.getElementById("car");
@@ -33,6 +58,8 @@ if (carrito == false ) {
             carrito = false;
         }
 })
+
+
 
 
 // abrir Gallery DESKTOP
@@ -150,4 +177,3 @@ let details = document.querySelector(".cart-modal__checkout-container")
 deleteCart.addEventListener("click", function (){
 details.innerHTML = '<p class="cart_empty"> Your cart is empty </p> '
 })
-
