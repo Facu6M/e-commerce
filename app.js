@@ -21,11 +21,13 @@ x.addEventListener("click", function() {
 // abrir y cerrar CART carrito
 
 let carrito = false;
+let priceModal = document.querySelector(".cart-modal__price")
 
 cart.addEventListener("click", function() {
 if (carrito == false ) {
         document.querySelector(".cart-modal").style.display = "block";
         carrito = true;
+        priceModal.innerHTML = `$125 x ${lastValue} <span>$${lastValue*125}.00</span>`
  }   else {
             document.querySelector(".cart-modal").style.display = "none"
             carrito = false;
@@ -106,7 +108,7 @@ foto8.addEventListener("click", function() {
 
 const inputMenos = document.querySelector(".input_minus")
 const inputPlus = document.querySelector(".input_plus")
-const input = document.querySelector(".input__number")
+let input = document.querySelector(".input__number")
 
 let userInputNumber = 0;
 
@@ -127,12 +129,14 @@ inputMenos.addEventListener("click", function(){
 
 const boton = document.querySelector(".details__button")
 let valor = document.querySelector(".header__cart--notification")
+let lastValue = parseInt(valor.innerText)
 
 boton.addEventListener("click", function() {
 
-let lastValue = parseInt(valor.innerText);
 lastValue = lastValue + userInputNumber;
 
 valor.innerText = lastValue;
 valor.style.display = "block"
+priceModal.innerHTML = `$125 x ${lastValue} <span>$${lastValue*125}.00</span>`
 })
+
