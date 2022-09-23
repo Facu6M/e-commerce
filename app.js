@@ -5,6 +5,7 @@ const cruz = document.querySelector(".modal-gallery__close");
 
 const cart = document.getElementById("car");
 
+
 // mostrar menu MOBILE PHONE
 
 menu.addEventListener("click", function() {
@@ -17,18 +18,26 @@ x.addEventListener("click", function() {
     document.getElementById("modal").style.display = "none";
 })
 
-// abrir CART carrito
+// abrir y cerrar CART carrito
+
+let carrito = false;
 
 cart.addEventListener("click", function() {
-        document.querySelector(".cart-modal").style.display = "block"
+if (carrito == false ) {
+        document.querySelector(".cart-modal").style.display = "block";
+        carrito = true;
+ }   else {
+            document.querySelector(".cart-modal").style.display = "none"
+            carrito = false;
+        }
 })
-
 
 
 // abrir Gallery DESKTOP
 
 gallery.addEventListener("click", function() {
     document.querySelector(".modal-gallery__backgroundd").style.display = "block";
+    body.style.backgroundColor = "hsl(0deg, 0%, 0%, 0.5)"
 })
 
 // seleccionar otra foto en Gallery DESKTOP
@@ -65,3 +74,65 @@ cruz.addEventListener("click", function() {
 })
 
 
+// // seleccionar otra foto en Desktop
+
+const foto5 = document.getElementById("1")
+const foto6 = document.getElementById("2")
+const foto7 = document.getElementById("3")
+const foto8 = document.getElementById("4")
+
+foto5.addEventListener("click", function() {
+    const imagen5 = document.querySelector(".gallery__image-container")
+    imagen5.style.backgroundImage = " url(./images/image-product-1.jpg)";
+})
+
+foto6.addEventListener("click", function() {
+    const imagen6 = document.querySelector(".gallery__image-container")
+    imagen6.style.backgroundImage = " url(./images/image-product-2.jpg)";
+})
+
+foto7.addEventListener("click", function() {
+    const imagen7 = document.querySelector(".gallery__image-container")
+    imagen7.style.backgroundImage = " url(./images/image-product-3.jpg)";
+})
+
+foto8.addEventListener("click", function() {
+    const imagen8 = document.querySelector(".gallery__image-container")
+    imagen8.style.backgroundImage = " url(./images/image-product-4.jpg)";
+})
+
+
+// Aumentar el input o Decrementar el input
+
+const inputMenos = document.querySelector(".input_minus")
+const inputPlus = document.querySelector(".input_plus")
+const input = document.querySelector(".input__number")
+
+let userInputNumber = 0;
+
+inputPlus.addEventListener("click", function(){
+    userInputNumber++;
+    input.value = userInputNumber
+})
+
+inputMenos.addEventListener("click", function(){
+    userInputNumber--;
+    if (userInputNumber <= 0 ){
+        userInputNumber = 0;
+    }
+    input.value = userInputNumber
+})
+
+//agregar el valor del input al carrito de arriba
+
+const boton = document.querySelector(".details__button")
+let valor = document.querySelector(".header__cart--notification")
+
+boton.addEventListener("click", function() {
+
+let lastValue = parseInt(valor.innerText);
+lastValue = lastValue + userInputNumber;
+
+valor.innerText = lastValue;
+valor.style.display = "block"
+})
