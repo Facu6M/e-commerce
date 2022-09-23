@@ -36,11 +36,12 @@ if (carrito == false ) {
 
 
 // abrir Gallery DESKTOP
-
+/*
 gallery.addEventListener("click", function() {
     document.querySelector(".modal-gallery__backgroundd").style.display = "block";
     body.style.backgroundColor = "hsl(0deg, 0%, 0%, 0.5)"
 })
+*/
 
 // seleccionar otra foto en Gallery DESKTOP
 
