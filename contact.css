@@ -38,6 +38,10 @@ body {
   color: hsl(220deg, 14%, 75%);;
 }
 
+#line{
+  border-bottom: 4px solid orange;
+}
+
 .header {
   display: flex;
   align-items: center;
