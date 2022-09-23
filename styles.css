@@ -554,4 +554,8 @@ ul, li, a {
   font-size: 0.9em;
   font-weight: 700;
 }
-/*# sourceMappingURL=styles.css.map */
+
+.cart-modal__delete{
+  cursor:pointer;
+  }
+
