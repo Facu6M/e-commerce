@@ -131,6 +131,7 @@ const boton = document.querySelector(".details__button")
 let valor = document.querySelector(".header__cart--notification")
 let lastValue = parseInt(valor.innerText)
 
+
 boton.addEventListener("click", function() {
 
 lastValue = lastValue + userInputNumber;
@@ -138,5 +139,14 @@ lastValue = lastValue + userInputNumber;
 valor.innerText = lastValue;
 valor.style.display = "block"
 priceModal.innerHTML = `$125 x ${lastValue} <span>$${lastValue*125}.00</span>`
+})
+
+// icono borrar
+
+let deleteCart = document.querySelector(".cart-modal__delete")
+let details = document.querySelector(".cart-modal__checkout-container")
+
+deleteCart.addEventListener("click", function (){
+details.innerHTML = '<p class="cart_empty"> Your cart is empty </p> '
 })
 
