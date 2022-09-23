@@ -403,6 +403,10 @@ ul, li, a {
   right: 6px;
 }
 
+.modal-gallery__thumnail {
+  cursor: pointer;
+}
+
 .cart-modal__title {
   font-weight: 700;
   padding: 24px;
@@ -459,18 +463,18 @@ ul, li, a {
 .modal-gallery__backgroundd {
   display: none;
   z-index: 1;
-  background-color: hsla(0deg, 0%, 0%, 0.5);
-  position: absolute;
   top: 0;
-  left: 0;
   height: 100%;
   width: 100%;
+  background-color: hsla(0deg, 0%, 0%, 0.5);
+  position: absolute;
 }
 
 .modal-gallery__image-container {
   background-image: url(./images/image-product-1.jpg);
   height: 446px;
   background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .modal-gallery__previous {
