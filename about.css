@@ -189,7 +189,7 @@ ul, li, a {
 }
 
 .gallery__image-container {
-  background-image: url(./images/image-product-1.jpg);
+    background-image: url(./shoes_1.jfif);
   background-position-y: -35px;
   height: 300px;
   background-size: cover;
@@ -199,9 +199,10 @@ ul, li, a {
   .gallery__image-container {
     width: 100%;
     border-radius: 20px;
-    height: 400px;
+    height: 100%;
     background-repeat: no-repeat;
     background-position-y: 0px;
+    background-size: cover;
   }
 }
 
