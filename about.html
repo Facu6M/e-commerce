@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" sizes="32x32" href="https://thumbs.dreamstime.com/z/logotipo-de-la-zapatilla-deporte-103290833.jpg">
+    <link rel="stylesheet" type="text/css" href="about.css">
+    <title>Document</title>
+</head>
+<body>
+    <main class="main-container">
+        <header class="header">
+            <div class="header__navigation">
+              <img class="header__menu" src="./images/icon-menu.svg">
+              <img class="header__logo" src="./images/logo.svg">
+
+              <nav class="navbar">
+                <ul class="navbar__items">
+                  <li><a class="navbar__link" href="index.html">Collections</li></a>
+                  <li><a class="navbar__link" href="men.html">Men</a></li>
+                  <li><a class="navbar__link" href="index.html">Women</a></li>
+                  <li><a class="navbar__link" id="line" href="about.html">About</a></li>
+                  <li><a class="navbar__link" href="contact.html">Contactos</a></li>
+                </ul>
+              </nav>
+
+            </div>
+
+            <!-- MODAL -->
+      <div class="modal-navbar-div" id="modal">
+        <nav class="modal-navbar">
+          <img class="modal-navbar_close" src="./images/icon-close.svg">
+          <ul class="modal-navbar_items">
+            <li><a class="modal-navbar__link" href="index.html">Collections</li></a>
+            <li><a class="modal-navbar__link" href="men.html">Men</a></li>
+            <li><a class="modal-navbar__link" href="index.html">Women</a></li>
+            <li><a class="modal-navbar__link" href="about.html">About</a></li>
+            <li><a class="modal-navbar__link" href="contact.html">Contactos</a></li>
+          </ul>
+        </nav>
+      </div>
+
+
+            <div class="header__cart-avatar">
+              <div class="header__cart">
+                <div class="header__cart--notification">0</div>
+                <img id="car" src="./images/icon-cart.svg">
+              </div>
+              <img class="header__avatar" id="prueba" src="./images/image-avatar.png">
+            </div>
+          </header>
+
+
+
+          <section class="content">
+
+            <article class="gallery">
+              <div class="gallery__image-container">
+                <img class="gallery__previous" src="./images/icon-previous.svg">
+                <img class="gallery__next" src="./images/icon-next.svg">
+              </div>
+              <div class="gallery_thumnails">
+                <img src="./shoes_1.png" class="gallery__thumnail" id="1">
+                <img src="./shoes_2.png" class="gallery__thumnail" id="2">
+                <img src="./shoes_3.png" class="gallery__thumnail" id="foto">
+                <img src="./shoes_4.png" class="gallery__thumnail" id="4">
+              </div>
+            </article>
+
+            <article class="details">
+              <h2 class="details__company">Sneaker Company</h2>
+
+              <h2 class="details__title">The best sneakers in the country</h2>
+
+              <p class="details__description"> This is a shoe store where you can find all kinds of shoes, from sports to the most elegant on the market.
+
+
+            </article>
+          </section>
+
+
+
+
+
+
+
+              <!-- Inicio cart modal -->
+    <div class="cart-modal" id="cart">
+        <p class="cart-modal__title">Cart</p>
+        <div class="cart-modal__checkout-container">
+     <div class="cart-modal__details-container">
+     <img class="cart-modal__image" src="./images/image-product-1-thumbnail.jpg" alt="">
+  <div>
+    <p class="cart-modal__product">Autumn Limited Edition</p>
+    <p class="cart-modal__price">$125 x 3 <span class="alt">$375.00</span></p>
+  </div>
+  <img class="cart-modal__delete" src="./images/icon-delete.svg" alt="">
+        </div>
+        <button class="cart-modal__deletee">Checkout</button>
+      </div>
+    </div>
+      <!-- Fin cart modal -->
+    </main>
+
+    <script src="about.js"></script>
+</body>
+</html>
